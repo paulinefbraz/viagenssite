@@ -1,0 +1,73 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Open Sans', sans-serif; color: #333; background: #fff; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+.btn { display: inline-block; padding: 14px 36px; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; cursor: pointer; border: none; transition: opacity 0.2s, transform 0.15s; }
+.btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn--orange { background: #e87722; color: #fff; }
+.btn--blue { background: #2e6da4; color: #fff; width: 160px; text-align: center; padding: 12px 0; }
+
+.navbar { display: flex; align-items: center; justify-content: space-between; background: #2e6da4; padding: 0 40px; height: 60px; position: sticky; top: 0; z-index: 100; }
+.navbar__logo { display: flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 1.35rem; color: #fff; }
+.logo-icon { font-size: 1.5rem; }
+.logo-text strong { color: #e87722; }
+.navbar__links { display: flex; gap: 32px; }
+.navbar__links a { color: #fff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem; padding-bottom: 4px; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+.navbar__links a:hover, .navbar__links a.active { border-bottom-color: #fff; }
+
+.hero { position: relative; height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.32); z-index: 1; }
+.hero__content { position: relative; z-index: 2; text-align: center; color: #fff; padding: 0 20px; }
+.hero__content h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 12px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+.hero__content p { font-size: 1.1rem; font-weight: 600; margin-bottom: 28px; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+
+.section-title { text-align: center; font-size: 1.8rem; font-weight: 800; color: #222; margin-bottom: 32px; }
+.section-title::before, .section-title::after { content: ''; display: inline-block; width: 60px; height: 2px; background: #ccc; vertical-align: middle; margin: 0 14px; }
+
+.destinos { background: #f5f5f5; padding: 56px 40px 48px; }
+.destinos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+.card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.14); }
+.card img { width: 100%; height: 170px; object-fit: cover; display: block; }
+.card__body { padding: 18px 16px 20px; text-align: center; }
+.card__body h3 { font-size: 1.05rem; font-weight: 700; color: #222; margin-bottom: 6px; }
+.card__body p { font-size: 0.88rem; color: #666; }
+.section-cta { text-align: center; margin-top: 36px; }
+
+.sobre { background: #e8e8e8; padding: 56px 40px; text-align: center; }
+.sobre__texto { font-size: 1rem; color: #555; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.contato { background: #d6e4f0; padding: 56px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 960px; margin: 0 auto; }
+.contato h3 { font-size: 1.2rem; font-weight: 700; color: #222; margin-bottom: 20px; }
+.form-group { margin-bottom: 14px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Open Sans', sans-serif; font-size: 0.9rem; background: #fff; color: #333; outline: none; transition: border-color 0.2s; resize: vertical; }
+.form-group input:focus, .form-group textarea:focus { border-color: #2e6da4; }
+.contato__map { margin-bottom: 16px; border-radius: 8px; overflow: hidden; height: 160px; }
+.contato__map img { width: 100%; height: 100%; object-fit: cover; }
+.contato__details p { font-size: 0.92rem; color: #333; margin-bottom: 10px; }
+
+.footer { background: #2e6da4; color: #fff; text-align: center; padding: 20px 40px; font-size: 0.88rem; }
+
+.page-destinos { padding: 56px 40px; background: #f5f5f5; min-height: 70vh; }
+.destinos-full__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+.destinos-full__card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.09); transition: transform 0.2s, box-shadow 0.2s; }
+.destinos-full__card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.destinos-full__card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.destinos-full__card .card-info { padding: 20px 18px; }
+.destinos-full__card .card-info h3 { font-size: 1.1rem; font-weight: 700; color: #222; margin-bottom: 6px; }
+.destinos-full__card .card-info p { font-size: 0.86rem; color: #666; margin-bottom: 14px; }
+.destinos-full__card .card-info .tag { display: inline-block; background: #e87722; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; }
+.page-intro { text-align: center; max-width: 600px; margin: 0 auto 40px; color: #666; font-size: 1rem; }
+.back-link { display: inline-block; margin-bottom: 32px; color: #2e6da4; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+.back-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .destinos__grid, .destinos-full__grid { grid-template-columns: 1fr; }
+  .contato { grid-template-columns: 1fr; padding: 40px 24px; }
+  .hero__content h1 { font-size: 1.8rem; }
+  .navbar { padding: 0 20px; }
+  .navbar__links { gap: 16px; }
+  .destinos { padding: 40px 20px; }
+}
